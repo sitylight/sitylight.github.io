@@ -71,7 +71,7 @@
     <article id="post-install-jenkins" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/03/25/install-jenkins/" class="article-date">
-  <time datetime="2018-03-25T06:44:20.000Z" itemprop="datePublished">2018-03-25</time>
+  <time datetime="2018-03-25T06:44:51.000Z" itemprop="datePublished">2018-03-25</time>
 </a>
     
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/25/install-jenkins/">install_jenkins</a>
+      <a class="article-title" href="/2018/03/25/install-jenkins/">Install Jenkins on CentOs 7</a>
     </h1>
   
 
@@ -90,11 +90,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="1-Download-and-install-jenkins"><a href="#1-Download-and-install-jenkins" class="headerlink" title="1. Download and install jenkins"></a>1. Download and install jenkins</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo</span><br><span class="line">$ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key</span><br><span class="line">$ yum install jenkins</span><br></pre></td></tr></table></figure>
+<h2 id="2-change-jenkins-port"><a href="#2-change-jenkins-port" class="headerlink" title="2 change jenkins port"></a>2 change jenkins port</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/jenkins</span><br><span class="line"><span class="comment"># change JENKINS_PORT</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-config-jdk-for-jenkins-and-start-service"><a href="#3-config-jdk-for-jenkins-and-start-service" class="headerlink" title="3. config jdk for jenkins and start service"></a>3. config jdk for jenkins and start service</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/jenkins</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/03/25/install-jenkins/image/add_jdk.jpg" alt="jdk path"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl restart jenkins</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/25/install-jenkins/" data-id="cjf6fzdzh0002p3pvvgeobuea" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/25/install-jenkins/" data-id="cjf6gluu60002r6pv5zzihu9l" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -139,7 +143,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/25/hello-world/" data-id="cjf6fzdz60000p3pvgpxkls69" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/25/hello-world/" data-id="cjf6glutt0000r6pv20ifnk3p" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -189,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/25/install-hexo/" data-id="cjf6fzdzd0001p3pvlo7mmb5x" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/25/install-hexo/" data-id="cjf6gluu20001r6pviigu71ub" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -230,7 +234,7 @@
       <ul>
         
           <li>
-            <a href="/2018/03/25/install-jenkins/">install_jenkins</a>
+            <a href="/2018/03/25/install-jenkins/">Install Jenkins on CentOs 7</a>
           </li>
         
           <li>

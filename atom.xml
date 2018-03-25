@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-25T06:44:20.578Z</updated>
+  <updated>2018-03-25T07:05:36.657Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>install_jenkins</title>
+    <title>Install Jenkins on CentOs 7</title>
     <link href="http://yoursite.com/2018/03/25/install-jenkins/"/>
     <id>http://yoursite.com/2018/03/25/install-jenkins/</id>
-    <published>2018-03-25T06:44:20.000Z</published>
-    <updated>2018-03-25T06:44:20.578Z</updated>
+    <published>2018-03-25T06:44:51.000Z</published>
+    <updated>2018-03-25T07:05:36.657Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-Download-and-install-jenkins"><a href="#1-Download-and-install-jenkins" class="headerlink" title="1. Download and install jenkins"></a>1. Download and install jenkins</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo</span><br><span class="line">$ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key</span><br><span class="line">$ yum install jenkins</span><br></pre></td></tr></table></figure><h2 id="2-change-jenkins-port"><a href="#2-change-jenkins-port" class="headerlink" title="2 change jenkins port"></a>2 change jenkins port</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/jenkins</span><br><span class="line"><span class="comment"># change JENKINS_PORT</span></span><br></pre></td></tr></table></figure><h2 id="3-config-jdk-for-jenkins-and-start-service"><a href="#3-config-jdk-for-jenkins-and-start-service" class="headerlink" title="3. config jdk for jenkins and start service"></a>3. config jdk for jenkins and start service</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/jenkins</span><br></pre></td></tr></table></figure><p><img src="/2018/03/25/install-jenkins/image/add_jdk.jpg" alt="jdk path"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl restart jenkins</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-Download-and-install-jenkins&quot;&gt;&lt;a href=&quot;#1-Download-and-install-jenkins&quot; class=&quot;headerlink&quot; title=&quot;1. Download and install jenkins&quot;
+      
     
     </summary>
     

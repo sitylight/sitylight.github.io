@@ -5,18 +5,20 @@
   
 
   
-  <title>install_jenkins | Derrick Hexo Blog</title>
+  <title>Install Jenkins on CentOs 7 | Derrick Hexo Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Try to wring something about program">
+  <meta name="description" content="1. Download and install jenkins123$ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo$ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key$ yum insta">
 <meta property="og:type" content="article">
-<meta property="og:title" content="install_jenkins">
+<meta property="og:title" content="Install Jenkins on CentOs 7">
 <meta property="og:url" content="http://yoursite.com/2018/03/25/install-jenkins/index.html">
 <meta property="og:site_name" content="Derrick Hexo Blog">
-<meta property="og:description" content="Try to wring something about program">
-<meta property="og:updated_time" content="2018-03-25T06:44:20.578Z">
+<meta property="og:description" content="1. Download and install jenkins123$ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo$ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key$ yum insta">
+<meta property="og:image" content="http://yoursite.com/2018/03/25/install-jenkins/image/add_jdk.jpg">
+<meta property="og:updated_time" content="2018-03-25T07:05:36.657Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="install_jenkins">
-<meta name="twitter:description" content="Try to wring something about program">
+<meta name="twitter:title" content="Install Jenkins on CentOs 7">
+<meta name="twitter:description" content="1. Download and install jenkins123$ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo$ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key$ yum insta">
+<meta name="twitter:image" content="http://yoursite.com/2018/03/25/install-jenkins/image/add_jdk.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Derrick Hexo Blog" type="application/atom+xml">
   
@@ -70,7 +72,7 @@
         <section id="main"><article id="post-install-jenkins" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/03/25/install-jenkins/" class="article-date">
-  <time datetime="2018-03-25T06:44:20.000Z" itemprop="datePublished">2018-03-25</time>
+  <time datetime="2018-03-25T06:44:51.000Z" itemprop="datePublished">2018-03-25</time>
 </a>
     
   </div>
@@ -81,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      install_jenkins
+      Install Jenkins on CentOs 7
     </h1>
   
 
@@ -89,11 +91,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="1-Download-and-install-jenkins"><a href="#1-Download-and-install-jenkins" class="headerlink" title="1. Download and install jenkins"></a>1. Download and install jenkins</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo</span><br><span class="line">$ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key</span><br><span class="line">$ yum install jenkins</span><br></pre></td></tr></table></figure>
+<h2 id="2-change-jenkins-port"><a href="#2-change-jenkins-port" class="headerlink" title="2 change jenkins port"></a>2 change jenkins port</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/jenkins</span><br><span class="line"><span class="comment"># change JENKINS_PORT</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-config-jdk-for-jenkins-and-start-service"><a href="#3-config-jdk-for-jenkins-and-start-service" class="headerlink" title="3. config jdk for jenkins and start service"></a>3. config jdk for jenkins and start service</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/jenkins</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/03/25/install-jenkins/image/add_jdk.jpg" alt="jdk path"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl restart jenkins</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/25/install-jenkins/" data-id="cjf6fzdzh0002p3pvvgeobuea" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/25/install-jenkins/" data-id="cjf6gluu60002r6pv5zzihu9l" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -142,7 +148,7 @@
       <ul>
         
           <li>
-            <a href="/2018/03/25/install-jenkins/">install_jenkins</a>
+            <a href="/2018/03/25/install-jenkins/">Install Jenkins on CentOs 7</a>
           </li>
         
           <li>
