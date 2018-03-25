@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Derrick Hexo Blog">
 <meta property="og:description" content="1. Download and install jenkins123$ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo$ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key$ yum insta">
 <meta property="og:image" content="http://yoursite.com/2018/03/25/install-jenkins/image/add_jdk.jpg">
-<meta property="og:updated_time" content="2018-03-25T07:05:36.657Z">
+<meta property="og:updated_time" content="2018-03-25T07:15:22.738Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Install Jenkins on CentOs 7">
 <meta name="twitter:description" content="1. Download and install jenkins123$ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo$ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key$ yum insta">
@@ -93,13 +93,14 @@
       
         <h2 id="1-Download-and-install-jenkins"><a href="#1-Download-and-install-jenkins" class="headerlink" title="1. Download and install jenkins"></a>1. Download and install jenkins</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo</span><br><span class="line">$ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key</span><br><span class="line">$ yum install jenkins</span><br></pre></td></tr></table></figure>
 <h2 id="2-change-jenkins-port"><a href="#2-change-jenkins-port" class="headerlink" title="2 change jenkins port"></a>2 change jenkins port</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/jenkins</span><br><span class="line"><span class="comment"># change JENKINS_PORT</span></span><br></pre></td></tr></table></figure>
-<h2 id="3-config-jdk-for-jenkins-and-start-service"><a href="#3-config-jdk-for-jenkins-and-start-service" class="headerlink" title="3. config jdk for jenkins and start service"></a>3. config jdk for jenkins and start service</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/jenkins</span><br></pre></td></tr></table></figure>
+<h2 id="3-open-firwall-port"><a href="#3-open-firwall-port" class="headerlink" title="3 open firwall port"></a>3 open firwall port</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ firewall-cmd --permanent --add-port=8080/tcp</span><br><span class="line">$ firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+<h2 id="4-config-jdk-for-jenkins-and-start-service"><a href="#4-config-jdk-for-jenkins-and-start-service" class="headerlink" title="4. config jdk for jenkins and start service"></a>4. config jdk for jenkins and start service</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/jenkins</span><br></pre></td></tr></table></figure>
 <p><img src="/2018/03/25/install-jenkins/image/add_jdk.jpg" alt="jdk path"><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl restart jenkins</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/25/install-jenkins/" data-id="cjf6gntv70002shpvj0qtt9o9" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/25/install-jenkins/" data-id="cjf6gyeas0002twpv7j15w7dt" class="article-share-link">Teilen</a>
       
       
     </footer>

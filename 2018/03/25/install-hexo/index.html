@@ -7,19 +7,19 @@
   
   <title>CentOS7 Install Hexo | Derrick Hexo Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.Install Node.jsDownload1$ wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz More info: Node download website Unzip and move to a place you want123$ xz -d node-v8.9.3-linux">
+  <meta name="description" content="Install Node.jsDownload1$ wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz More info: Node download website Unzip and move to a place you want123$ xz -d node-v8.9.3-linux-x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS7 Install Hexo">
 <meta property="og:url" content="http://yoursite.com/2018/03/25/install-hexo/index.html">
 <meta property="og:site_name" content="Derrick Hexo Blog">
-<meta property="og:description" content="1.Install Node.jsDownload1$ wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz More info: Node download website Unzip and move to a place you want123$ xz -d node-v8.9.3-linux">
+<meta property="og:description" content="Install Node.jsDownload1$ wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz More info: Node download website Unzip and move to a place you want123$ xz -d node-v8.9.3-linux-x">
 <meta property="og:image" content="http://yoursite.com/2018/03/25/install-hexo/image/config.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/03/25/install-hexo/image/ssh-key.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/03/25/install-hexo/image/github_key.jpg">
-<meta property="og:updated_time" content="2018-03-25T06:47:17.014Z">
+<meta property="og:updated_time" content="2018-03-25T07:15:00.687Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7 Install Hexo">
-<meta name="twitter:description" content="1.Install Node.jsDownload1$ wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz More info: Node download website Unzip and move to a place you want123$ xz -d node-v8.9.3-linux">
+<meta name="twitter:description" content="Install Node.jsDownload1$ wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz More info: Node download website Unzip and move to a place you want123$ xz -d node-v8.9.3-linux-x">
 <meta name="twitter:image" content="http://yoursite.com/2018/03/25/install-hexo/image/config.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Derrick Hexo Blog" type="application/atom+xml">
@@ -93,7 +93,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-Install-Node-js"><a href="#1-Install-Node-js" class="headerlink" title="1.Install Node.js"></a>1.Install Node.js</h2><h5 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+        <h2 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h2><h5 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node download website</a></p>
 <h5 id="Unzip-and-move-to-a-place-you-want"><a href="#Unzip-and-move-to-a-place-you-want" class="headerlink" title="Unzip and move to a place you want"></a>Unzip and move to a place you want</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ xz -d node-v8.9.3-linux-x64.tar.xz</span><br><span class="line">$ tar -xvf node-v8.9.3-linux-x64.tar.xz</span><br><span class="line">$ mv node-v8.9.3-linux-x64 /usr/<span class="built_in">local</span>/node</span><br></pre></td></tr></table></figure>
 <h5 id="Config-environment-variable"><a href="#Config-environment-variable" class="headerlink" title="Config environment variable"></a>Config environment variable</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/profile</span><br><span class="line">  add <span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/node/bin to bottom</span><br><span class="line">  esc + :wq! to <span class="built_in">exit</span> editing file</span><br><span class="line">$ <span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
@@ -107,11 +107,12 @@
 <h5 id="Create-GitHub-repository-and-config-ssh-key"><a href="#Create-GitHub-repository-and-config-ssh-key" class="headerlink" title="Create GitHub repository and config ssh-key"></a>Create GitHub repository and config ssh-key</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">create a repository named &quot;sitylight&quot;</span><br><span class="line">add ssh-key to github</span><br></pre></td></tr></table></figure>
 <p><img src="/2018/03/25/install-hexo/image/ssh-key.jpg" alt="deploy config"><br><img src="/2018/03/25/install-hexo/image/github_key.jpg" alt="deploy config"></p>
 <h5 id="general-and-deploy"><a href="#general-and-deploy" class="headerlink" title="general and deploy"></a>general and deploy</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
+<h2 id="4-start-serve-on-local"><a href="#4-start-serve-on-local" class="headerlink" title="4. start serve on local"></a>4. start serve on local</h2><h4 id="open-firewall-port"><a href="#open-firewall-port" class="headerlink" title="open firewall port"></a>open firewall port</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ firewall-cmd --permanent --add-port=4000/tcp</span><br><span class="line">$ firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+<h4 id="start-server"><a href="#start-server" class="headerlink" title="start server"></a>start server</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/25/install-hexo/" data-id="cjf6gntv30001shpvzwypzn4z" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/25/install-hexo/" data-id="cjf6gyean0001twpv72ebuurn" class="article-share-link">Teilen</a>
       
       
     </footer>
