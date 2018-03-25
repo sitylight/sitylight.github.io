@@ -14,7 +14,9 @@
 <meta property="og:site_name" content="Derrick Hexo Blog">
 <meta property="og:description" content="Install Node.jsDownload1$ wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz More info: Node download website Unzip and move to a place you want123$ xz -d node-v8.9.3-linux-x">
 <meta property="og:image" content="http://yoursite.com/2018/03/25/install-hexo/image/config.jpg">
-<meta property="og:updated_time" content="2018-03-25T06:31:51.993Z">
+<meta property="og:image" content="http://yoursite.com/2018/03/25/install-hexo/image/ssh-key.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/03/25/install-hexo/image/github_key.jpg">
+<meta property="og:updated_time" content="2018-03-25T06:37:58.257Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7 Install Hexo">
 <meta name="twitter:description" content="Install Node.jsDownload1$ wget https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-linux-x64.tar.xz More info: Node download website Unzip and move to a place you want123$ xz -d node-v8.9.3-linux-x">
@@ -103,17 +105,32 @@
 <h2 id="3-Deploy-Hexo-to-GitHub"><a href="#3-Deploy-Hexo-to-GitHub" class="headerlink" title="3. Deploy Hexo to GitHub"></a>3. Deploy Hexo to GitHub</h2><h5 id="Config-global-git-envrionment"><a href="#Config-global-git-envrionment" class="headerlink" title="Config global git envrionment"></a>Config global git envrionment</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># email should be same with github account</span></span><br><span class="line">$ git config --global user.mail <span class="string">"sity_light@sina.com"</span></span><br><span class="line">$ git config --globad user.name <span class="string">"sitylight"</span></span><br></pre></td></tr></table></figure>
 <h5 id="Create-SSH-key"><a href="#Create-SSH-key" class="headerlink" title="Create SSH key"></a>Create SSH key</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C email.account</span><br><span class="line"><span class="comment"># following operation are always enter</span></span><br></pre></td></tr></table></figure>
 <h5 id="Create-GitHub-repository-and-config-ssh-key"><a href="#Create-GitHub-repository-and-config-ssh-key" class="headerlink" title="Create GitHub repository and config ssh-key"></a>Create GitHub repository and config ssh-key</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">create a repository named &quot;sitylight&quot;</span><br><span class="line">add ssh-key to github</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/03/25/install-hexo/image/ssh-key.jpg" alt="deploy config"><br><img src="/2018/03/25/install-hexo/image/github_key.jpg" alt="deploy config"></p>
 <h5 id="general-and-deploy"><a href="#general-and-deploy" class="headerlink" title="general and deploy"></a>general and deploy</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/25/install-hexo/" data-id="cjf6ffc1q0000lapv7u2quj0v" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/25/install-hexo/" data-id="cjf6fmwsw0001mipv5adcz92g" class="article-share-link">Teilen</a>
       
       
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2018/03/25/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
@@ -144,6 +161,10 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/03/25/hello-world/">Hello World</a>
+          </li>
         
           <li>
             <a href="/2018/03/25/install-hexo/">CentOS7 Install Hexo</a>
